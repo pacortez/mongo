@@ -22,12 +22,12 @@
                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Saved Articles</a>
+                    <a class="nav-link" href="/savedarticles">Saved Articles</a>
                 </li>
                 <li class="nav-item">
                         <form class="form-inline">
-                                <button class="btn btn-outline-success" type="button">Scrape New Articles</button>
-                                <button class="btn btn-outline-success" type="button">Clear Articles</button>
+                                <button class="btn btn-outline-success" type="button" id="scrape-button">Scrape New Articles</button>
+                                <button class="btn btn-outline-success" type="button" id="clear-articles">Clear Articles</button>
                             </form>
                 </li>
                 
@@ -38,34 +38,27 @@
 
     <div class="jumbotron" id="wrapper">
         <h1 class="display-4">Article scraper</h1>
-        <p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+        <p class="lead">Scrape articles</p>
         <hr class="my-4">
-        <p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+        <p>And add notes to them</p>
     </div>
 
-
+<!-- //model or append w/jquery -->
     <div id="wrapper">
-        <h1>Article scraper</h1>
 
-        <div id="articles">Saved Articles</div>
-        <div id="notes">Notes</div>
+        <div id="articles"></div>
+        <div id="notes"></div>
     </div>
 
-    <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src=".../100px180/" alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
-          </div>
+    <div class = "clear"></div>
 
     <footer class="footer mt-auto py-3">
         <div class="container">
-            <span class="text-muted">Footer Content here</span>
+            <span class="text-muted">Enjoy scraping!</span>
         </div>
         
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
     <script src="app.js"></script>
 </body>
