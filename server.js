@@ -112,18 +112,27 @@ app.get("/cleararticles", function(req, res) {
     });
 });
 
-app.post("/savedarticles", function(req, res) {
+app.put("/articles", function(req, res) {
     console.log(req.body)
-    db.Article.create(req.body)
-        .then(function(dbArticle) {
-            return db.SavedArticles.findOneAndUpdate({ _id: req.params.id}, { article: dbArticle._id }, { new: true });
+    db.Article.updateOne(saved, true)
+        .then(function() {
+            return db.Article.find({ saved: true });
         })
+        
         .catch(function(err) {
             res.json(err);
         });
 });
 
-
+app.get("/savedarticles", function(req, res) {
+    db.Article.find({ saved: true })
+        .then(function(dbSaved) {
+            res.json(dbSaved);
+        })
+        .catch(function(err) {
+            res.json(err);
+        });
+});
 
 
 //Starts server

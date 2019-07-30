@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Scraping</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
     
@@ -21,8 +21,11 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
+                <!-- <li class="nav-item">
                     <a class="nav-link" href="/savedarticles">Saved Articles</a>
+                </li> -->
+                <li class="nav-item">
+                    <a class="nav-link" href="/articles">Already Scraped Articles</a>
                 </li>
                 <li class="nav-item">
                         <form class="form-inline">
@@ -36,18 +39,19 @@
             </div>
         </nav>
 
-    <div class="jumbotron" id="wrapper">
+    <div class="jumbotron">
         <h1 class="display-4">Article scraper</h1>
         <p class="lead">Scrape articles</p>
         <hr class="my-4">
-        <p>And add notes to them</p>
+        <p>and add notes to them</p>
     </div>
 
 <!-- //model or append w/jquery -->
     <div id="wrapper">
-
-        <div id="articles"></div>
+        
         <div id="notes"></div>
+        <div id="articles"></div>
+        
     </div>
 
     <div class = "clear"></div>
