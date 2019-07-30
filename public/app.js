@@ -3,10 +3,11 @@ $.getJSON("/articles", function(data) {
         //Display info on page when it first loads
         // console.log(data[i])
         $("#articles").append("<div class='container'>")
-                $("#articles").append("<h5 class='card-title'>" + data[i].title + "</h5>")
-                $("#articles").append("<a href='https://www.nytimes.com" + data[i].link + "' target='_blank' class='btn btn-primary'>Read Article</a>")
-                $("#articles").append("<button type='button' class='btn btn-info save-article' data-title='" + data[i].title + "'>Save Article</button>")
-                $("#articles").append("<button type='button' class='btn btn-info make-note' data-id='" + data[i]._id + "'>Make/Update a Note</button>")
+        $("#articles").append("<h5 class='card-title'>" + data[i].title + "</h5>")
+        $("#articles").append("<a href='https://www.nytimes.com" + data[i].link + "' target='_blank' class='btn btn-primary'>Read Article</a>")
+        // $("#articles").append("<button type='button' class='btn btn-info save-article' data-title='" + data[i].title + "'>Save Article</button>")
+        $("#articles").append("<button type='button' class='btn btn-info make-note' data-id='" + data[i]._id + "'>Make/Update a Note</button>")
+        $("#articles").append("</div>")
     }
 });
 
@@ -39,8 +40,9 @@ $(document).on("click", "#scrape-button", function() {
                 $("#articles").append("<div class='container'>")
                 $("#articles").append("<h5 class='card-title'>" + data[i].title + "</h5>")
                 $("#articles").append("<a href='https://www.nytimes.com" + data[i].link + "' target='_blank' class='btn btn-primary'>Read Article</a>")
-                $("#articles").append("<button type='button' class='btn btn-info save-article' data-title='" + data[i].title + "'>Save Article</button>")
+                // $("#articles").append("<button type='button' class='btn btn-info save-article' data-title='" + data[i].title + "'>Save Article</button>")
                 $("#articles").append("<button type='button' class='btn btn-info make-note' data-id='" + data[i]._id + "'>Make/Update a Note</button>")
+                $("#articles").append("</div>")
             }
             numArticles +=5;
             startingIndex +=5;
